@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" >Slider Test</string>
+    <string name="action_settings" >Settings</string>
+    <string name="redSliderText">Red: </string>
+    <string name="greenSliderText">Green: </string>
+    <string name="blueSliderText">Blue: </string>
+    <string name="redResultLabelText">Red: </string>
+    <string name="greenResultLabelText">Green: </string>
+    <string name="blueResultLabelText">Blue:</string>
+    <string name="redResult">0</string>
+    <string name="greenResult">0</string>
+    <string name="blueResult">0</string>
+    <string name="seekBarValue">0</string>
+
+</resources>

@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:baselineAligned="false"
+    android:id="@+id/mainLayout">
+
+    <TextView
+            android:id="@+id/redSliderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/redSliderText"
+            android:textSize="25sp"
+            android:layout_marginTop="10sp"/>
+
+    <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/redSeekBar"
+            android:progress="0"
+            android:max="255"
+            android:layout_alignTop="@+id/redSliderTextView"
+            android:layout_toRightOf="@+id/greenSliderTextView"
+            android:layout_alignRight="@+id/greenSeekBar"/>
+
+    <TextView
+            android:id="@+id/greenSliderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/greenSliderText"
+            android:textSize="25sp"
+            android:layout_marginTop="10sp"
+            android:layout_below="@+id/redSeekBar"
+            android:layout_alignLeft="@+id/redSliderTextView"/>
+
+    <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/greenSeekBar"
+            android:progress="0"
+            android:max="255"
+            android:layout_alignBottom="@+id/greenSliderTextView"
+            android:layout_toRightOf="@+id/greenSliderTextView"
+            android:layout_alignParentRight="true"/>
+
+    <TextView
+            android:id="@+id/blueSliderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blueSliderText"
+            android:textSize="25sp"
+            android:layout_below="@+id/greenSeekBar"
+            android:layout_alignLeft="@+id/greenSliderTextView"
+            android:layout_marginTop="10sp"/>
+
+    <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/blueSeekBar"
+            android:progress="0"
+            android:max="255"
+            android:layout_alignBottom="@+id/blueSliderTextView"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/greenSliderTextView"/>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:layout_above="@+id/redResultTextView"
+            android:layout_alignRight="@+id/blueSeekBar"
+            android:layout_below="@+id/blueSliderTextView"
+            android:layout_alignLeft="@+id/redResultLabelTextView"
+            android:background="@color/red"
+            android:id="@+id/colorLayout">
+            </RelativeLayout>
+
+    <TextView
+            android:id="@+id/redResultLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blueSliderTextView"
+            android:text="@string/redResultLabelText"
+            android:textSize="25sp"
+            android:layout_marginTop="180sp"/>
+
+    <TextView
+            android:id="@+id/redResultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/redResult"
+            android:textSize="25sp"
+            android:layout_alignBaseline="@+id/redResultLabelTextView"
+            android:layout_alignBottom="@+id/redResultLabelTextView"
+            android:layout_toRightOf="@+id/redResultLabelTextView"/>
+
+    <TextView
+            android:id="@+id/greenResultLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/redResultLabelTextView"
+            android:text="@string/greenResultLabelText"
+            android:textSize="25sp"
+            android:layout_marginTop="10sp"/>
+
+    <TextView
+            android:id="@+id/greenResultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/greenResult"
+            android:textSize="25sp"
+            android:layout_alignBaseline="@+id/greenResultLabelTextView"
+            android:layout_alignBottom="@+id/greenResultLabelTextView"
+            android:layout_toRightOf="@+id/greenResultLabelTextView"/>
+
+    <TextView
+            android:id="@+id/blueResultLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/greenResultLabelTextView"
+            android:text="@string/blueResultLabelText"
+            android:textSize="25sp"
+            android:layout_marginTop="10sp"/>
+
+    <TextView
+            android:id="@+id/blueResultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blueResult"
+            android:textSize="25sp"
+            android:layout_alignBaseline="@+id/blueResultLabelTextView"
+            android:layout_alignBottom="@+id/blueResultLabelTextView"
+            android:layout_toRightOf="@+id/blueResultLabelTextView"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:id="@+id/resetButton"
+            android:layout_below="@+id/redResultTextView"
+            android:layout_alignRight="@+id/blueSeekBar"
+            android:layout_above="@+id/blueResultTextView"
+            android:layout_marginRight="25sp"/>
+
+</RelativeLayout>
